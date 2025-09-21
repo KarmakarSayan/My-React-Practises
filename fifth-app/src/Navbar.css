@@ -1,0 +1,70 @@
+
+body {
+    background-color: black; /* set the whole page background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    margin: 0px;
+    pad: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #c45959;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     position: fixed;   /* makes navbar stay in place */
+    top: 0;
+    width: 1470px;       
+    z-index: 1000;     /* ensure it stays above other content */
+    
+}
+
+.logo h2 {
+    color: #000000;
+
+}
+
+
+.nav-links {
+    list-style: none;
+    /* remove the  li st dots  form the conntent */
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff4d4d;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.cart-icon:hover {
+    color: #ff4d4d;
+}
