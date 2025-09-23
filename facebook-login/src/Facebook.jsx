@@ -11,7 +11,6 @@ function Facebook() {
     useEffect(() => {
         async function fetchData() {
             let res = await fetch("http://localhost:1000/Admin");
-
             let data = await res.json();
             setAdmin(data);
         }
