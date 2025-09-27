@@ -24,7 +24,7 @@ function Flipkart() {
                         </div>
                         <div className="details">
                             <p>{item.title.toUpperCase()}</p>
-                            <p>M.R.P: <strike>{item.price}</strike></p>
+                            <p>M.R.P: {item.price}</p>
                             <p>Rating: {item.rating}</p>
                             <p>Description: {item.description}</p>
                         </div>

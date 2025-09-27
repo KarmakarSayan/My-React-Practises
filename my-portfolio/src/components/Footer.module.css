@@ -1,0 +1,45 @@
+.footer {
+  background-color: #111827;
+  color: white;
+  padding: 2rem 1rem;
+}
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.brandInfo {
+  text-align: center;
+}
+.brandInfo span {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.brandInfo p {
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+.links a {
+  color: #9ca3af;
+  transition: color 0.3s;
+}
+.links a:hover {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  .brandInfo {
+    text-align: left;
+  }
+}

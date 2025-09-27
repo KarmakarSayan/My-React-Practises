@@ -1,0 +1,154 @@
+.projects {
+  padding: 4rem 1rem;
+  background-color: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(4px);
+}
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.projectCard {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.3s;
+}
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.imageContainer {
+  height: 12rem;
+  overflow: hidden;
+}
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardContent {
+  padding: 1.5rem;
+}
+.cardContent h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #f9fafb;
+}
+.cardContent p {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tag {
+  padding: 0.25rem 0.5rem;
+  background-color: #374151;
+  color: #d1d5db;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+.projectLink {
+  color: #60a5fa;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.projectLink:hover {
+  color: #93c5fd;
+}
+.viewAll {
+  text-align: center;
+  margin-top: 3rem;
+}
+.viewAllButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #1d4ed8, #5b21b6);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: box-shadow 0.3s;
+}
+.viewAllButton:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); } /* Kept at 2 columns as in original code */
+}
+
+.tag {
+  padding: 0.25rem 0.5rem;
+  /* background-color: #374151;  <-- Remove or comment out this line */
+  color: #d1d5db;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+  /* Add a subtle shadow for depth */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Specific colors for each tag */
+.tagHtml {
+  background-color: #e34c26; /* Orange-red for HTML */
+}
+.tagCss {
+  background-color: #264de4; /* Blue for CSS */
+}
+.tagJavascript {
+  background-color: #f7df1e; /* Yellow for JavaScript */
+  color: #333; /* Darker text for better contrast on yellow */
+}
+.tagMysql {
+  background-color: #00758f; /* Darker blue/teal for MySQL */
+}
+.tagSqlServer {
+  background-color: #cc2927; /* Red for SQL Server */
+}
+.tagJava {
+  background-color: #f89820; /* Orange for Java */
+}
+.tagPython {
+  background-color: #3776ab; /* Dark blue for Python */
+}
+.tagReact {
+  background-color: #61dafb; /* Light blue for React */
+  color: #333;
+}
+.tagNodejs {
+  background-color: #68a063; /* Green for Node.js */
+}
+.tagExpress {
+  background-color: #000000; /* Black for Express */
+}
+.tagMongodb {
+  background-color: #47a248; /* Green for MongoDB */
+}
+.tagFigma {
+  background-color: #f24e1e; /* Orange for Figma */
+}
+/* You can add more tag colors here for other technologies */
+
+.tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}

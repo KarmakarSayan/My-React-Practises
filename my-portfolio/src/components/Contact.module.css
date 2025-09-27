@@ -1,0 +1,156 @@
+.contact {
+  padding: 4rem 1rem;
+}
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.formContainer, .infoContainer {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.formContainer {
+  background: linear-gradient(to right, #1e40af, #111827, #6b21a8);
+}
+.formContainer label {
+  display: block;
+  color: #e5e7eb;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.formContainer input, .formContainer textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #1f2937;
+  color: #f9fafb;
+  border: 1px solid #374151;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+.formContainer input:focus, .formContainer textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #1e40af;
+}
+.formContainer button {
+  width: 100%;
+  padding: 0.75rem 0;
+  background: linear-gradient(to right, #1d4ed8, #5b21b6);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+.formContainer button:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.infoContainer {
+  background: linear-gradient(to right, #5b21b6, #111827, #1e40af);
+  height: 100%;
+}
+.infoContainer h3, .infoContainer h4 {
+  font-weight: 600;
+  color: #f9fafb;
+  margin: 0;
+}
+.infoContainer h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+}
+.infoItem svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #60a5fa;
+  margin-top: 0.25rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+.infoItem p {
+  color: #9ca3af;
+  margin: 0;
+}
+.socials {
+  margin-top: 2rem;
+}
+.socials h4 {
+  margin-bottom: 1rem;
+}
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+.socialLinks a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-color 0.3s;
+}
+.socialLinks a:hover {
+  background-color: #2563eb;
+}
+.socialLinks svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+  .formContainer, .infoContainer {
+    width: 50%;
+  }
+}
+
+/* Add these to the bottom of Contact.module.css */
+
+.thankYouMessage {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: rgba(17, 24, 39, 0.8);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.thankYouMessage h3 {
+  font-size: 1.75rem;
+  color: #fff;
+  margin: 0 0 1rem 0;
+}
+
+.errorMessage {
+  color: #fca5a5; /* A light red color for errors */
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

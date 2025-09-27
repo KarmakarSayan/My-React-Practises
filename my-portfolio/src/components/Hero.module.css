@@ -1,0 +1,124 @@
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textWrapper {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  max-width: 36rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.buttonPrimary, .buttonSecondary {
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.3s;
+}
+
+.buttonPrimary {
+  border: 2px solid #60a5fa;
+  color: #60a5fa;
+}
+
+.buttonPrimary:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.buttonSecondary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.buttonSecondary:hover {
+  background-color: #1d4ed8;
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- UPDATED STYLES START HERE --- */
+
+.profileSnake {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileSnakeImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.profileSnakeBorder {
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  width: 88%;
+  height: 88%;
+  border-radius: 9999px;
+  z-index: 0;
+  pointer-events: none;
+  background: conic-gradient(from 0deg, #eb2525 0%, #38bdf8 40%, #e5fa00 80%, #00ff33 100%);
+  filter: blur(0.2px) brightness(1.2);
+  animation: snake-revolve 3s linear infinite;
+}
+
+/* --- UPDATED STYLES END HERE --- */
+
+@media (min-width: 768px) {
+  .hero { padding-top: 8rem; padding-bottom: 6rem; }
+  .container { flex-direction: row; }
+  .textWrapper { width: 50%; margin-bottom: 0; }
+  .heading { font-size: 3rem; }
+  .subheading { font-size: 1.875rem; }
+  .imageWrapper { width: 50%; }
+}
