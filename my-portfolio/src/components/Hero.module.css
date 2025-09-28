@@ -1,4 +1,6 @@
+/* HERO SECTION */
 .hero {
+  position: relative;
   padding-top: 6rem;
   padding-bottom: 4rem;
   padding-left: 1rem;
@@ -11,6 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 .textWrapper {
@@ -37,6 +40,7 @@
   max-width: 36rem;
 }
 
+/* BUTTONS */
 .buttonGroup {
   display: flex;
   gap: 1rem;
@@ -71,22 +75,22 @@
   background-color: #1d4ed8;
 }
 
+/* IMAGE WRAPPER ON RIGHT */
 .imageWrapper {
-  width: 100%;
+  width: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Align to right within container */
 }
 
-/* --- UPDATED STYLES START HERE --- */
-
+/* PROFILE IMAGE WITH ANIMATED BORDER */
 .profileSnake {
   position: relative;
-  width: 100%;
-  max-width: 300px;
+  width: 280px; /* Increased size */
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: width 0.5s ease;
 }
 
 .profileSnakeImg {
@@ -110,15 +114,72 @@
   background: conic-gradient(from 0deg, #eb2525 0%, #38bdf8 40%, #e5fa00 80%, #00ff33 100%);
   filter: blur(0.2px) brightness(1.2);
   animation: snake-revolve 3s linear infinite;
+  transition: all 0.5s ease;
 }
 
-/* --- UPDATED STYLES END HERE --- */
-
+/* RESPONSIVE STYLES */
 @media (min-width: 768px) {
-  .hero { padding-top: 8rem; padding-bottom: 6rem; }
-  .container { flex-direction: row; }
-  .textWrapper { width: 50%; margin-bottom: 0; }
-  .heading { font-size: 3rem; }
-  .subheading { font-size: 1.875rem; }
-  .imageWrapper { width: 50%; }
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .textWrapper {
+    width: 60%;
+    margin-right: 2.5rem; /* space between text and image */
+  }
+
+  .imageWrapper {
+    width: 40%;
+    justify-content: flex-end;
+  }
+
+  .profileSnake {
+    width: 300px; /* Larger on desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .textWrapper {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .profileSnake {
+    width: 220px; /* Adjusted for tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .profileSnake {
+    width: 180px; /* Adjusted for mobile */
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .subheading {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+/* ANIMATION */
+@keyframes snake-revolve {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

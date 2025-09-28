@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import styles from './Projects.module.css';
 
 // Helper function to get the correct style class for a tag
@@ -79,19 +80,31 @@ const ProjectCard = ({ title, description, imageUrl, tags, link }) => (
 );
 
 const Projects = () => {
+    const [showAll, setShowAll] = useState(false);
+
+    // If showAll is false, only show first 3 projects
+    const visibleProjects = showAll ? projectsData : projectsData.slice(0, 3);
+
     return (
         <section id="projects" className={styles.projects}>
             <div className={styles.container}>
                 <h2 className={`${styles.title} gradient-text`}>Featured Projects</h2>
                 <div className={styles.grid}>
-                    {projectsData.map(project => <ProjectCard key={project.title} {...project} />)}
+                    {visibleProjects.map(project => <ProjectCard key={project.title} {...project} />)}
                 </div>
-                 <div className={styles.viewAll}>
-                    <a href="#" className={styles.viewAllButton}>View All Projects</a>
+                <div className={styles.viewAll}>
+                    {!showAll && (
+                        <button 
+                          onClick={() => setShowAll(true)} 
+                          className={styles.viewAllButton}
+                        >
+                          View All Projects
+                        </button>
+                    )}
                 </div>
             </div>
         </section>
     );
-}
+};
 
 export default Projects;

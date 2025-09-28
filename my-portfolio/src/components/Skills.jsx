@@ -43,9 +43,12 @@ const SkillBar = ({ label, percentage, gradient }) => {
 const Skills = () => {
     const technicalSkills = [
         { label: "HTML/CSS", percentage: 95, gradient: "#2563eb" },
+        { label: "Java", percentage: 80, gradient: "#16a34a" },
         { label: "JavaScript", percentage: 90, gradient: "#7c3aed" },
         { label: "MySQL", percentage: 85, gradient: "#3b82f6" },
-        { label: "Java", percentage: 80, gradient: "#16a34a" },
+        { label: "React", percentage: 50, gradient: "linear-gradient(90deg, #f472b6, #f43f5e)" },
+        
+        
     ];
     const designSkills = [
         { label: "UI/UX Design", percentage: 85, gradient: "linear-gradient(90deg, #a78bfa, #8b5cf6)" },
