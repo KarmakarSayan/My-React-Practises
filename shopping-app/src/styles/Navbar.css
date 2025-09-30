@@ -1,0 +1,32 @@
+/* Center nav links + searchbar */
+.navbar-nav.mx-auto {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Search bar styling */
+.searchbar input {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 220px;
+  transition: all 0.3s ease;
+}
+
+.searchbar input:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Brand styling */
+.navbar-brand span {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Optional: adjust dropdown toggle spacing */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
