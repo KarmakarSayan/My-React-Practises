@@ -1,49 +1,76 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Dropdown from 'react-bootstrap/Dropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Dropdown from "react-bootstrap/Dropdown";
 import { FaUserCircle } from "react-icons/fa";
-import '../styles/NavBar.css';
+import { Link } from "react-router-dom";
+import "../styles/NavBar.css";
 
-
-function ColorSchemesExample() {
+function CustomNavbar() {
   return (
-    <>
-      <Navbar bg="primary" data-bs-theme="dark" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">SK <span>Traders</span></Navbar.Brand>
-          
-          <Nav className="mx-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+    <Navbar bg="primary" data-bs-theme="dark" expand="lg" sticky="top">
+      <Container fluid>
+        {/* Brand Logo */}
+        <Navbar.Brand as={Link} to="/" className="brand-logo">
+          SK <span>Traders</span>
+        </Navbar.Brand>
+
+        {/* Toggle button for mobile */}
+        <Navbar.Toggle aria-controls="navbar-nav" />
+
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="mx-auto align-items-center">
+            {/* Nav Links */}
+            <Nav.Link as={Link} to="/" className="nav-link-item">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/products" className="nav-link-item">
+              Products
+            </Nav.Link>
 
             {/* Search Bar */}
             <div className="searchbar">
-              <input 
-                type="text" 
-                placeholder="Enter Details To Search"
+              <input
+                type="text"
+                placeholder="Search fashion, electronics, accessories..."
               />
+              <button className="search-btn">Search</button>
             </div>
+
+            {/* ✅ Add Products Link */}
+            <Nav.Link
+              as={Link}
+              to="/admin-homepage/add-products"
+              className="add-product-btn"
+            >
+              + Add Products
+            </Nav.Link>
           </Nav>
 
-          {/* Account Dropdown */}
-          <Dropdown align="end">
+          {/* Profile Dropdown */}
+          <Dropdown align="end" className="profile-dropdown">
             <Dropdown.Toggle variant="light" id="dropdown-account">
-              <FaUserCircle size={24} style={{ marginRight: "5px" }} />
+              <FaUserCircle size={22} style={{ marginRight: "6px" }} />
               Account
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#settings">Settings</Dropdown.Item>
-              <Dropdown.Item href="#help">Help</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/profile">
+                Profile
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/settings">
+                Settings
+              </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#logout">Logout</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/logout">
+                Logout
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        </Container>
-      </Navbar>
-    </>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default ColorSchemesExample;
+export default CustomNavbar;

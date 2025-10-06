@@ -1,0 +1,49 @@
+{
+  "products": [
+    
+    {
+      "id": "6799",
+      "pr_name": "Apple iPhone 15 ",
+      "pr_category": "Electronics",
+      "pr_brand": "Apple",
+      "pr_price": "47999",
+      "pr_desc": "Apple iPhone 15 (128 GB) - Black",
+      "pr_imageurl": "https://m.media-amazon.com/images/I/71657TiFeHL._SL1500_.jpg",
+      "pr_stock": "20",
+      "pr_rating": "5"
+    },
+    {
+      "id": "304c",
+      "pr_name": "SPARX Mens ",
+      "pr_category": "Fashion",
+      "pr_brand": "Puma",
+      "pr_price": "852",
+      "pr_desc": "SPARX Mens Sc0857g Sneaker",
+      "pr_imageurl": "https://m.media-amazon.com/images/I/71pLzRW-D+L._SX625_.jpg",
+      "pr_stock": "111",
+      "pr_rating": "3"
+    },
+    {
+      "id": "35fe",
+      "pr_name": "INALSA Air Fryer",
+      "pr_category": "Home Appliances",
+      "pr_brand": "",
+      "pr_price": "2657",
+      "pr_desc": "INALSA Air Fryer 3.5 ltr|1400 W with Air Crisp Technology|Temperature & Timer Control|8 Preset Menu & Digital Display|Air fry, Bake,Roast,Reheat,Dehydrate|Airfryer Recipe book-NutriFry 3.5",
+      "pr_imageurl": "https://m.media-amazon.com/images/I/610cQQ1-LoL._SL1200_.jpg",
+      "pr_stock": "56",
+      "pr_rating": "2"
+    },
+    {
+      "id": "3f29",
+      "pr_name": "Don't Believe Everything You Think",
+      "pr_category": "Books",
+      "pr_brand": "Penguin",
+      "pr_price": "184",
+      "pr_desc": "Don't Believe Everything You Think (English)",
+      "pr_imageurl": "https://m.media-amazon.com/images/I/715qi-cIbML._AC_UY218_.jpg",
+      "pr_stock": "6",
+      "pr_rating": "3"
+    }
+  ]
+}
