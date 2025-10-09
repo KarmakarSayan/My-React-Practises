@@ -7,6 +7,14 @@
       "phone": "12345678654",
       "password": "1234",
       "re_password": "1234"
+    },
+    {
+      "id": "fd73",
+      "name": "sayan",
+      "email": "abc@gmail.com",
+      "phone": "9021740412",
+      "password": "12345",
+      "re_password": "12345"
     }
   ]
 }

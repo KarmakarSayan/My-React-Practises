@@ -1,0 +1,109 @@
+.updateproduct {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.updateproduct h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.updateproduct form {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.updateproduct form label {
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Inputs & Selects */
+.updateproduct form input,
+.updateproduct form select,
+.updateproduct form textarea {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.updateproduct form input:focus,
+.updateproduct form select:focus,
+.updateproduct form textarea:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 0 8px rgba(0, 198, 255, 0.6);
+}
+
+/* Dropdown options */
+.updateproduct form select option {
+  background-color: #203a43;
+  color: #ffffff;
+}
+
+/* Textarea */
+.updateproduct form textarea {
+  resize: none;
+}
+
+/* Submit button */
+.updateproduct form button {
+  margin-top: 25px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 0;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.updateproduct form button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
+  transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .updateproduct form {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .updateproduct h2 {
+    font-size: 1.6rem;
+  }
+}

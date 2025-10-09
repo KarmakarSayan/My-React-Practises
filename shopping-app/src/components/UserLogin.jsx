@@ -54,7 +54,7 @@ function UserLogin() {
         localStorage.removeItem("userPassword");
       }
 
-      navigate("/user-homepage"); // Redirect after login
+      navigate("/user-home"); // Redirect after login
     } else {
       toast.error("Invalid Email or Password ❌");
     }

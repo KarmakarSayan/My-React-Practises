@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/ViewProduct.css";
-// import star from "./Star"; // (use it if you have a star rating component or image)
 
 function ViewProduct() {
     const location = useLocation();
@@ -24,10 +23,7 @@ function ViewProduct() {
                     <p><strong>Rating:</strong> {product.pr_rating}/5</p>
                     <p><strong>Description:</strong> {product.pr_desc}</p>
                 </div>
-                <div className="view-product-actions">
-                    <button className="edit-btn">Edit</button>
-                    <button className="delete-btn">Delete</button>
-                </div>
+                
             </div>
         </div>
 

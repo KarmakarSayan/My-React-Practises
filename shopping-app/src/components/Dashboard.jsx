@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../Styles/Dashboard.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
+
 
 function Dashboard() {
     const [products, setProducts] = useState([]);
@@ -36,12 +37,20 @@ function Dashboard() {
                 toast.error(`${pr_name} product not found  `)
             })
     }
+
+
+    let navigate = useNavigate()
+    function edit_item(id) {
+        navigate(`/admin-homepage/updateproduct/${id}`);
+
+    }
+
     return (
         <div className="dashboard-container">
 
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <h2>All Products</h2>
-                <p style={{fontSize:"bold"}}>Total Products: {products.length}</p>
+                <p style={{ fontSize: "bold" }}>Total Products: {products.length}</p>
             </div>
 
             <div className="products-grid">
@@ -58,7 +67,7 @@ function Dashboard() {
                             {/* <h3><a  style={{textDecoration:"none"}} href="">{product.pr_name}</a></h3> */}
                             <h3  >
                                 {/*  this part is hlep me  like when i click on the name of the image , its hsould go to the view details of that particular product  */}
-                                <Link state={product} to={`/admin-homepage/viewProducts/${product.id}`} className="landing-link" style={{ textDecoration: "none" }}>
+                                <Link state={product} to={`/admin-homepage/ViewProduct/${product.id}`} className="landing-link" style={{ textDecoration: "none" }}>
                                     {product.pr_name}
                                 </Link>
 
@@ -69,7 +78,7 @@ function Dashboard() {
                             <p><strong>Stock:</strong> {product.pr_stock}</p>
                             <p><strong>Rating:</strong> {product.pr_rating}/5</p>
                             <div className="product-buttons">
-                                <button>Edit</button>
+                                <button onClick={() => edit_item(product.id)}>Edit</button>
                                 <button onClick={() => remove_item(product.id, product.pr_name)}>Delete</button>
 
                             </div>
